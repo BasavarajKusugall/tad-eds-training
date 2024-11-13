@@ -33,7 +33,6 @@ export default async function decorate(block) {
       block.querySelectorAll('[role=tabpanel]').forEach((panel) => {
         panel.setAttribute('aria-hidden', true);
       });
-      let btnText = button.textContent + ' clicked'|| '';
       
       tablist.querySelectorAll('button').forEach((btn) => {
         btn.setAttribute('aria-selected', false);
@@ -42,14 +41,19 @@ export default async function decorate(block) {
       button.setAttribute('aria-selected', true);
 
       //Append Text content
-      while(tabpanel.hasChildNodes())
-        { 
-          tabpanel.firstChild.remove()
-
-        }
-      let pEl = document.createElement('p');
-      pEl.append(btnText);
-      tabpanel.append(pEl);
+      if(tablist.parentElement.classList.contains('click-track')){
+        let btnText = button.textContent + ' clicked'|| '';
+        while(tabpanel.hasChildNodes())
+          { 
+            tabpanel.firstChild.remove()
+  
+          }
+        let pEl = document.createElement('p');
+        pEl.append(btnText);
+        tabpanel.append(pEl);
+      }
+      
+      //end
     });
     tablist.append(button);
     tab.remove();

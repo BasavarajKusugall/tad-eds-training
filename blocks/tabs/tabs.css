@@ -71,6 +71,7 @@
   cursor: pointer;
   transition: 0.3s;
   font-size: 17px;
+  line-height: 0.25 !important;
 }
 
 /* Style the tab */
@@ -107,7 +108,7 @@
 }
 .tabs.vertical-tabs .tabs-panel p{
   color: #23a8e0;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 /* Change background color of buttons on hover */
