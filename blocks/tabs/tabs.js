@@ -33,11 +33,23 @@ export default async function decorate(block) {
       block.querySelectorAll('[role=tabpanel]').forEach((panel) => {
         panel.setAttribute('aria-hidden', true);
       });
+      let btnText = button.textContent + ' clicked'|| '';
+      
       tablist.querySelectorAll('button').forEach((btn) => {
         btn.setAttribute('aria-selected', false);
       });
       tabpanel.setAttribute('aria-hidden', false);
       button.setAttribute('aria-selected', true);
+
+      //Append Text content
+      while(tabpanel.hasChildNodes())
+        { 
+          tabpanel.firstChild.remove()
+
+        }
+      let pEl = document.createElement('p');
+      pEl.append(btnText);
+      tabpanel.append(pEl);
     });
     tablist.append(button);
     tab.remove();
