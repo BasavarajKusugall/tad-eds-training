@@ -76,8 +76,8 @@
 /* Style the tab */
 .tabs.vertical-tabs {
   float: left !important;
-  border: 1px solid #ccc;
-  width: 100% !important
+  width: 100% !important;
+  border: 1px solid #24a8e0;
 }
 
 /* Style the tab */
@@ -90,7 +90,7 @@
 /* Style the buttons inside the tab */
 .tabs.vertical-tabs .tabs-list button {
   display: block;
-  color: black;
+  color: white;
   padding: 22px 16px;
   width: 100%;
   border: none;
@@ -99,6 +99,15 @@
   cursor: pointer;
   transition: 0.3s;
   font-size: 17px;
+  border-bottom: 2px solid #898989;
+  background-color: #a8a8a8;
+}
+.tabs.vertical-tabs .tabs-list button p{
+  text-transform: uppercase;
+}
+.tabs.vertical-tabs .tabs-panel p{
+  color: #23a8e0;
+  font-size: 50px;
 }
 
 /* Change background color of buttons on hover */
@@ -114,7 +123,7 @@
 .tabs.vertical-tabs .tabs-panel {
   margin: auto;
   width: auto;
-  padding: 10px;
+  padding: 100px;
   text-align: center;
 }
 

@@ -8,11 +8,29 @@ export default function decorate(block) {
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
       if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
-      else div.className = 'cards-card-body';
+      else {
+        div.className = 'cards-card-body';
+
+        let date = new Date();
+        let formattedDate = formatDate(date);
+        let dateEl = document.createElement('p');
+        dateEl.className = 'cards-date'
+        dateEl.append(formattedDate);
+        div.prepend(dateEl);
+      }
     });
     ul.append(li);
   });
   ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.textContent = '';
   block.append(ul);
+ 
 }
+function formatDate(date) {
+  let monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+  let day = date.getDate();
+  let monthIndex = date.getMonth();
+  let year = date.getFullYear();
+  
+  return monthNames[monthIndex]+ ' ' + day + ', ' + year;
+  }

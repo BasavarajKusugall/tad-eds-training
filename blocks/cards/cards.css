@@ -25,3 +25,16 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+.cards.cards-date-show .cards-date{
+  display: block;
+}
+.cards .cards-date{
+  display: none;
+
+}
+
+.cards.cards-them-black.them-text-white li{
+  background-color: black;
+  color: white;
+}
