@@ -4,9 +4,10 @@ const createCardBlock = (main, document) => {
   let desc;
   tab.querySelectorAll('.design-style-description').forEach((itm, i) => {
     console.log(itm)
-    desc = itm;
-    if(!desc){
+    if(desc){
       desc.append(itm);
+    }else{
+      desc = itm;
     }
 
 
