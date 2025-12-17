@@ -24,3 +24,5 @@ npm run lint
 1. Install the [AEM CLI](https://github.com/adobe/helix-cli): `npm install -g @adobe/aem-cli`
 1. Start AEM Proxy: `aem up` (opens your browser at `http://localhost:3000`)
 1. Open the `tad-eds-training` directory in your favorite IDE and start coding :)
+mountpoints:
+  /: https://drive.google.com/drive/folders/1DUmIHlzmLNJ_T6GH12-X1x_5tAL0FKFL
