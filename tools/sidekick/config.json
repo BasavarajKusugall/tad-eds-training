@@ -20,9 +20,29 @@
             "id": "dvids-library",
             "title": "DVIDS Library",
             "environments": [
-                "edit"
+                "edit","preview","live","development","publish"
             ],
             "url": "https://typesense.dvidshub.net",
+            "isPalette": true,
+            "includePaths": [
+                "**.docx**"
+            ],
+            "passConfig": true,
+            "copyMode": [
+              {
+                "mimeType": "image/*",
+                "value": "reference"
+              }
+            ],
+            "paletteRect": "top: 50px; bottom: 10px; right: 10px; left: auto; width:600px; height: calc(100vh - 60px)"
+        },
+        {
+            "id": "dvids-action",
+            "title": "DVIDS Custom Action",
+            "environments": [
+                "edit","preview","live","development","publish"
+            ],
+            "url": "/tools/dvids/dvids.html",
             "isPalette": true,
             "includePaths": [
                 "**.docx**"
