@@ -22,7 +22,7 @@
             "environments": [
                 "edit","preview","live","development","publish"
             ],
-            "url": "https://typesense.dvidshub.net",
+            "url": "/tools/dvids/dvids.html",
             "isPalette": true,
             "includePaths": [
                 "**.docx**"
